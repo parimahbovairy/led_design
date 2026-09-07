@@ -1,8 +1,5 @@
 # Arduino LED Light Patterns 💡
 
-A simple Arduino project for controlling multiple LEDs and creating
-different programmable lighting patterns.
-
 ## 📌 About the Project
 
 This project demonstrates how to control **14 LEDs** using an Arduino board.
@@ -19,12 +16,6 @@ lighting to more dynamic back-and-forth effects.
 - 14 × current-limiting resistors
 - Breadboard
 - Jumper wires
-
-After connecting the LEDs to the Arduino UNO and uploading the program, the final hardware setup looks like this:
-
-<p align="center"> <img src="images/final-result.jpg" width="800"> </p>
-
-The LEDs can produce different lighting sequences and effects according to the programmed patterns.
 
 ## 🔌 LED Pin Configuration
 
@@ -47,10 +38,14 @@ The LEDs are connected to Arduino digital pins:
 | LED 12 | 12 |
 | LED 13 | 13 |
 
-> **Note:** Make sure each LED is connected through an appropriate
-> current-limiting resistor.
+<p align="center"> <img src="1.png" width="800"> </p>
 
-## ⚙️ How It Works
+<p align="center"> <img src="2.png" width="800"> </p>
+
+<p align="center"> <img src="3.jpg" width="800"> </p>
+
+
+## ⚙️ How It Works:
 
 ### 1. Pin Setup
 
@@ -62,6 +57,7 @@ pinMode(led1, OUTPUT);
 pinMode(led2, OUTPUT);
 // ...
 pinMode(led13, OUTPUT);
+
 2. Lighting Patterns
 
 The project contains 13 different functions:
@@ -119,62 +115,8 @@ Each pattern is executed twice before moving to the next pattern.
 
 After blink_13() finishes, the Arduino starts again from blink_1().
 
-✨ Patterns
 
-The project contains different sequences such as:
-
-Sequential LED activation
-
-Sequential LED deactivation
-
-Moving light effects
-
-Forward and backward effects
-
-Multiple LED combinations
-
-Repeating light sequences
-
-Each pattern is implemented as a separate function, making it easy to
-modify or add new effects.
-
-🛠️ Customization
-
-You can easily change the behavior of the project by modifying:
-
-Animation Speed
-
-Change:
-
-int t = 80;
-
-For a faster effect:
-
-int t = 30;
-
-For a slower effect:
-
-int t = 200;
-Create a New Pattern
-
-Add a new function:
-
-void blink_14()
-{
-  digitalWrite(led0, HIGH);
-  
-  delay(100);
-
-  digitalWrite(led0, LOW);
-  
-  delay(100);
-}
-
-Then call it from loop():
-
-blink_14();
-
-🚀 Uploading the Code
+🚀 Uploading the Code:
 
 Connect the Arduino board to your computer.
 
@@ -188,21 +130,23 @@ Click Upload.
 
 The LED patterns will start automatically.
 
-🏁 Final Result
+🏁 Final Result:
 
 After connecting the LEDs to the Arduino UNO and uploading the program, the final hardware setup looks like this:
 
-<p align="center"> <img src="images/final-result.jpg" width="800"> </p>
+<p align="center"> <img src="4.jpg" width="800"> </p>
 
 The LEDs can produce different lighting sequences and effects according to the programmed patterns.
 
-📂 Project Structure
+📂 Project Structure:
 Arduino-LED-Patterns/
 │
+
 ├── LED_Patterns.ino
+
 └── README.md
 
-🎯 Purpose
+🎯 Purpose:
 
 This project is intended as a simple example of:
 Arduino digital output control
